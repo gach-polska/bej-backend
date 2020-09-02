@@ -1,0 +1,34 @@
+{
+  "name": "bey",
+  "version": "1.0.0",
+  "description": "bey-backend",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run nodemon",
+    "dev": "cross-env NODE_ENV=development node ./api/api.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gach-polska/bej-backend.git"
+  },
+  "author": "gachPolska",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gach-polska/bej-backend/issues"
+  },
+  "homepage": "https://github.com/gach-polska/bej-backend#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "core-js": "^2.6.11",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.2",
+    "express": "^4.17.1",
+    "express-routes-mapper": "^1.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.8.1",
+    "jest": "^26.4.2",
+    "nodemon": "^2.0.4"
+  }
+}
