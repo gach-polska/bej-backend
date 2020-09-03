@@ -1,6 +1,18 @@
+const User = require('../models/user');
+
 const UserController = () => {
-    const createUser = async (req, res) =>
-        res.status(200).json({hello: "created"});
+    const createUser = async (req, res) => {
+        const { body } = req;
+        try {
+            const user = await User.create({
+               email: body.email,
+            });
+            return res.status(201).json(user)
+        } catch (err) {
+            console.log(err);
+            return res.status(500).json({ msg: 'Internal server error' });
+        }
+    }
 
     const getUsers = async (req, res) =>
         res.status(200).json({hello: "get"});

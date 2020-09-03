@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run nodemon",
-    "dev": "cross-env NODE_ENV=development node ./api/api.js",
+    "dev": "cross-env NODE_ENV=development nodemon ./api/api.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
