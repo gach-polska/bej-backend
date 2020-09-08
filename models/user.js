@@ -1,10 +1,11 @@
 const Sequelize = require('sequelize');
 
+const db = require('../../models/index');
 
 const users = 'users';
 
 
-const User = sequelize.define('User', {
+const User = db.sequelize.define('User', {
     email: {
       type: Sequelize.STRING,
       unique: true,
