@@ -1,9 +1,9 @@
 const BasicController = () => {
     const hello = async (req, res) =>
-        res.status(200).json({hello: "Siema beju"});
+        res.status(200).json({ hello: 'Siema beju' });
     return {
-        hello
-    }
+        hello,
+    };
 };
 
 module.exports = BasicController;
