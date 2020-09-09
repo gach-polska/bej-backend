@@ -13,7 +13,6 @@ const app = express();
 const server = http.Server(app);
 const mappedOpenRoutes = mapRoutes(config.publicRoutes, 'api/controllers/');
 
-
 // allow cross origin requests
 // configure to only allow requests from certain origins
 app.use(cors());
@@ -26,12 +25,12 @@ app.use(bodyParser.json());
 app.use('/', mappedOpenRoutes);
 
 server.listen(config.port, async () => {
-  console.log(`Server is listening on port ${config.port}`);
-  try {
-    await db.sequelize.authenticate();
-    console.log('Connection has been established successfully.');
-  } catch (error) {
-    console.error('Unable to connect to the database:', error);
-  }
-  return db;
+    console.log(`Server is listening on port ${config.port}`);
+    try {
+        await db.sequelize.authenticate();
+        console.log('Connection has been established successfully.');
+    } catch (error) {
+        console.error('Unable to connect to the database:', error);
+    }
+    return db;
 });
