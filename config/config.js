@@ -10,7 +10,7 @@ module.exports = {
         dialect: 'sqlite',
         storage: path.join(process.cwd(), 'db', 'database.sqlite'),
         dialectOptions: {
-            bigNumberStrings: true
-        }
-    }
+            bigNumberStrings: true,
+        },
+    },
 };
